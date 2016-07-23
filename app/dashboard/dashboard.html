@@ -1,0 +1,17 @@
+<div class="weather container-fluid">
+	<h1>Weather App Dashboard</h1>
+
+	<form class="form-inline">
+		<div class="form-group">
+			<select name="selector" ng-model="selectedZipcode" class="city btn btn-primary">
+				<option value="">Select city...</option>
+				<option ng-repeat="city in cities" value="{{city.code}}">{{city.name}}</option>
+			</select>
+			<button type="submit" class="btn btn-success" ng-class="{'disabled': !selectedZipcode}" ng-click=getWeather()>Get weather</button>
+		</div>
+	</form>
+
+	<div class="conditions">
+		<div wthr-conditions="forecast"></div>
+	</div>
+</div>

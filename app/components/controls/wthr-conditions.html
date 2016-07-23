@@ -1,0 +1,69 @@
+<div class="wthr-conditions row" ng-show="weather">
+	<div class="col-xs-12">
+		</br>
+		<h4>{{weather.title}}</h4>
+		</br>
+		<h5>Current conditions:</h5>
+		<table class="current-conditions table table-hover">
+			<thead>
+				<tr>
+					<th>Property</th>
+					<th>Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Wind speed</td>
+					<td>{{weather.wind.speed}} {{weather.units.speed}}</td>
+				</tr>
+				<tr>
+					<td>Wind direction</td>
+					<td>{{weather.wind.direction}}</td>
+				</tr>
+				<tr>
+					<td>Humidity</td>
+					<td>{{weather.atmosphere.humidity}} percent</td>
+				</tr>
+				<tr>
+					<td>Pressure</td>
+					<td>{{weather.atmosphere.pressure}} {{weather.units.pressure}}</td>
+				</tr>
+				<tr>
+					<td>Visibility</td>
+					<td>{{weather.atmosphere.visibility}} {{weather.units.distance}}</td>
+				</tr>
+				<tr>
+					<td>Sunrise</td>
+					<td>{{weather.astronomy.sunrise}}</td>
+				</tr>
+				<tr>
+					<td>Sunset</td>
+					<td>{{weather.astronomy.sunset}}</td>
+				</tr>
+				<tr>
+					<td>Temperature</td>
+					<td>{{weather.item.condition.temp}} {{weather.units.temperature}}</td>
+				</tr>
+				<tr>
+					<td>Sky</td>
+					<td>{{weather.item.condition.text}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+		<h5>Forecast:</h5>
+		<ul class="forecast row">
+			<li class="col-md-3 col-sm-4 col-xs-6" ng-repeat="day in weather.item.forecast">
+				<div class="day">
+					<span><strong>Day:</strong> {{day.day}}</span>
+					<span><strong>Date:</strong> {{day.date}}</span>
+					<span><strong>Highest temp:</strong> {{day.high}} {{weather.units.temperature}}</span>
+					<span><strong>Lowest temp:</strong> {{day.low}} {{weather.units.temperature}}</span>
+					<span><strong>Sky:</strong> {{day.text}}</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+</div>

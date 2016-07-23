@@ -1,0 +1,15 @@
+.wthr-conditions ul.forecast {
+	list-style: none;
+	padding: 0;
+}
+
+.wthr-conditions ul.forecast .day {
+	border: 1px solid gray;
+	padding: 5%;
+	margin: 10px 0;
+	border-radius: 5px;
+}
+
+.wthr-conditions ul.forecast .day span {
+	display: block;
+}
